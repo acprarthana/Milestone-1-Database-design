@@ -94,43 +94,67 @@ create table language(
 
 insert into users values ('alice', 'u1', 'alice@gmail.com');
 insert into users values ('bob', 'u2', 'bob@gmail.com');
+insert into users values ('charlie', 'u3', 'charlie@gmail.com');
+
 
 insert into movies values ('m1', 'inception');
 insert into movies values ('m2', 'avatar');
 
+
 insert into city values ('c1', 'mysore');
 insert into city values ('c2', 'bangalore');
+
 
 insert into theatre values ('t1', 'pvr', 'c1');
 insert into theatre values ('t2', 'inox', 'c2');
 
+
 insert into screen values ('s1', 't1');
 insert into screen values ('s2', 't2');
 
+
 insert into shows values ('sh1', '2026-05-01 10:00:00', 'm1', 's1');
 insert into shows values ('sh2', '2026-05-01 14:00:00', 'm2', 's2');
+insert into shows values ('sh3', '2026-05-01 18:00:00', 'm1', 's1');
+
 
 insert into seat values ('seat1', 'A1', 's1');
-insert into seat values ('seat2', 'A2', 's2');
+insert into seat values ('seat2', 'A2', 's1');
+insert into seat values ('seat3', 'A3', 's1');
+insert into seat values ('seat4', 'A4', 's1');
+
 
 insert into bookings values ('b1', 'sh1');
 insert into bookings values ('b2', 'sh2');
+insert into bookings values ('b3', 'sh1');
+insert into bookings values ('b4', 'sh3');
+
 
 insert into booking_users values ('b1', 'u1');
 insert into booking_users values ('b2', 'u2');
+insert into booking_users values ('b3', 'u2');
+insert into booking_users values ('b4', 'u3');
+
 
 insert into booking_seats values ('b1', 'seat1', 'u1');
 insert into booking_seats values ('b2', 'seat2', 'u2');
+insert into booking_seats values ('b3', 'seat3', 'u2');
+insert into booking_seats values ('b4', 'seat4', 'u3');
+
 
 insert into payments values ('p1', 'paid', 250, 'b1');
 insert into payments values ('p2', 'pending', 300, 'b2');
+insert into payments values ('p3', 'paid', 200, 'b3');
+insert into payments values ('p4', 'paid', 180, 'b4');
+
 
 insert into genre values ('m1', 'sci-fi');
 insert into genre values ('m2', 'action');
 
+
+
 insert into language values ('m1', 'english');
 insert into language values ('m2', 'hindi');
-
 
 select 
 	u.user_name,
