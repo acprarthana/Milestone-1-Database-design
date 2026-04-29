@@ -1,0 +1,3 @@
+"show_id","movie_name","show_time","seats_booked","seats_available"
+sh1,inception,"2026-05-01 10:00:00",2,2
+sh3,inception,"2026-05-01 18:00:00",1,3
